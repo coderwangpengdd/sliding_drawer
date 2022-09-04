@@ -1,7 +1,4 @@
 library sliding_drawer;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export './src/sliding_drawer.dart';
+export './src/sliding_drawer_controller.dart';
