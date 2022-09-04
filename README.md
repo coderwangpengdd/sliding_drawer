@@ -2,7 +2,7 @@
 # Sliding Drawer
 
 <p align="center">
-    <a href="https://img.shields.io/pub/v/sliding_drawer.svg"><img src="https://img.shields.io/pub/v/sliding_drawer.svg" alt="pub"></a>
+    <a href="https://pub.dev/packages/sliding_drawer"><img src="https://img.shields.io/pub/v/sliding_drawer.svg" alt="pub"></a>
     <a href="https://pub.dev/packages/very_good_analysis"><img src="https://img.shields.io/badge/style-very_good_analysis-B22C89.svg" alt="style: very good analysis"></a>
     <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="license: MIT"></a>
 </p>
@@ -14,8 +14,6 @@ A Flutter widget that provides a drawer with the sliding effect.
 <img src="https://user-images.githubusercontent.com/39079821/188270276-8920f536-5245-494f-b3db-3070b6211ca3.gif" width="300"/>
 
 ## 🎯 Features
-
-This package has:
 
 * Easy to use API
 * Any direction support
