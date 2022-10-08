@@ -11,7 +11,7 @@
 
 A Flutter widget that provides a drawer with the sliding effect.
 
-<img src="https://user-images.githubusercontent.com/39079821/188270276-8920f536-5245-494f-b3db-3070b6211ca3.gif" width="300"/>
+<img src="https://user-images.githubusercontent.com/39079821/194698857-c7c869ae-a856-417b-abbe-49c409a37408.gif" width="50%"/>
 
 ## 🎯 Features
 
@@ -27,7 +27,7 @@ Add the following line to `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  sliding_drawer: ^1.0.0
+  sliding_drawer: ^1.0.1
 ```
 
 ## 🚀 Usage
@@ -92,7 +92,7 @@ SlidingDrawer(
 );
 ```
 
-3. (Optional) Use the controller to interact with the drawer (eg, for closing):
+3. (Optional) Use the controller to interact with the drawer (e.g., for closing):
 
 ```dart
 // Call the animateClose method to close the drawer with an animation. 
@@ -111,4 +111,4 @@ If you encounter any problems or you have any ideas, feel free to open an issue:
  * [Form for feature requests](https://github.com/Ilya-Korolev/sliding_drawer/issues/new?template=feature_request.md)
  * [Form for questions](https://github.com/Ilya-Korolev/sliding_drawer/issues/new?template=question.md)
 
-There might be some grammar issues in the docs. I would be very grateful if you help me to fix it.
+There might be some grammar issues in the docs. I would be very grateful if you could help me to fix it.
