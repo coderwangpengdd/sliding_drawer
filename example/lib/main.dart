@@ -1,3 +1,5 @@
+import 'package:example/body_widget.dart';
+import 'package:example/drawer_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:sliding_drawer/sliding_drawer.dart';
 
@@ -13,7 +15,11 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(useMaterial3: true),
+      theme: ThemeData(
+        useMaterial3: true,
+        colorSchemeSeed: Colors.blue,
+        brightness: Brightness.dark,
+      ),
       home: const HomePage(),
     );
   }
@@ -50,7 +56,7 @@ class _HomePageState extends State<HomePage> {
       controller: _drawerController,
       // You can set up some optional properties
       // (eg, a shade color, an axis direction, a onShadedAreaTap callback).
-      shadeColor: Colors.black,
+      shadeColor: Colors.black.withOpacity(0.35),
       axisDirection: AxisDirection.right,
       onShadedAreaTap: () {
         // Use the controller to interact with the drawer (eg, for closing).
@@ -60,62 +66,15 @@ class _HomePageState extends State<HomePage> {
         );
       },
       // Add a drawer widget.
-      drawer: const Scaffold(
-        body: ColoredBox(
-          color: Colors.amber,
-          child: Center(
-            child: Text('Drawer'),
-          ),
-        ),
-      ),
+      drawer: const DrawerWidget(),
       // Add a body widget.
-      body: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.blueGrey,
-          elevation: 0,
-          toolbarHeight: 70,
-          leadingWidth: 70,
-          leading: AppBarButton(
-            onTap: () {
-              _drawerController.animateOpen(
-                duration: const Duration(milliseconds: 300),
-                curve: Curves.easeOut,
-              );
-            },
-          ),
-        ),
-        body: const ColoredBox(
-          color: Colors.pink,
-          child: Center(
-            child: Text('Body'),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class AppBarButton extends StatelessWidget {
-  const AppBarButton({
-    required this.onTap,
-    super.key,
-  });
-
-  final void Function()? onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Center(
-        child: Container(
-          height: 60,
-          width: 60,
-          decoration: const BoxDecoration(
-            color: Colors.amber,
-            shape: BoxShape.circle,
-          ),
-        ),
+      body: BodyWidget(
+        onMenuPressed: () {
+          _drawerController.animateOpen(
+            duration: const Duration(milliseconds: 300),
+            curve: Curves.easeOut,
+          );
+        },
       ),
     );
   }

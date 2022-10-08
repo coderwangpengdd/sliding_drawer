@@ -14,3 +14,6 @@ dependencies:
   
 dev_dependencies:
   very_good_analysis: ^3.1.0
+
+flutter:
+  uses-material-design: true
