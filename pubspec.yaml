@@ -1,10 +1,10 @@
 name: sliding_drawer
-version: 1.0.1
+version: 1.0.2
 description: A Flutter widget that provides a drawer with the sliding effect.
-homepage: https://github.com/Ilya-Korolev/sliding_drawer
-repository: https://github.com/Ilya-Korolev/sliding_drawer
-documentation: https://github.com/Ilya-Korolev/sliding_drawer
-issue_tracker: https://github.com/Ilya-Korolev/sliding_drawer/issues
+homepage: https://github.com/ilia-korolev/sliding_drawer
+repository: https://github.com/ilia-korolev/sliding_drawer
+documentation: https://github.com/ilia-korolev/sliding_drawer
+issue_tracker: https://github.com/ilia-korolev/sliding_drawer/issues
 
 environment:
   sdk: ">=3.0.0 <4.0.0"

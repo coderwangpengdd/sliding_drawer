@@ -27,7 +27,7 @@ Add the following line to `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  sliding_drawer: ^1.0.1
+  sliding_drawer: ^1.0.2
 ```
 
 ## 🚀 Usage
@@ -107,8 +107,8 @@ _drawerController.animateClose(
 Pull requests are welcome!
 
 If you encounter any problems or you have any ideas, feel free to open an issue: 
- * [Form for bugs](https://github.com/Ilya-Korolev/sliding_drawer/issues/new?template=bug_report.md)
- * [Form for feature requests](https://github.com/Ilya-Korolev/sliding_drawer/issues/new?template=feature_request.md)
- * [Form for questions](https://github.com/Ilya-Korolev/sliding_drawer/issues/new?template=question.md)
+ * [Form for bugs](https://github.com/ilia-korolev/sliding_drawer/issues/new?template=bug_report.md)
+ * [Form for feature requests](https://github.com/ilia-korolev/sliding_drawer/issues/new?template=feature_request.md)
+ * [Form for questions](https://github.com/ilia-korolev/sliding_drawer/issues/new?template=question.md)
 
 There might be some grammar issues in the docs. I would be very grateful if you could help me to fix it.
