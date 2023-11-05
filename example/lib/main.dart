@@ -58,6 +58,9 @@ class _HomePageState extends State<HomePage> {
       // (eg, a shade color, an axis direction, a onShadedAreaTap callback).
       shadeColor: Colors.black.withOpacity(0.35),
       axisDirection: AxisDirection.right,
+      // When onShadedAreaTap is not null and the drawer is not closed
+      // every interaction with the body will be ignored.
+      // To avoid this behavior leave onShadedAreaTap is null.
       onShadedAreaTap: () {
         // Use the controller to interact with the drawer (eg, for closing).
         _drawerController.animateClose(

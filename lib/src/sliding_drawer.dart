@@ -53,30 +53,34 @@ class SlidingDrawer extends StatelessWidget {
     super.key,
   });
 
-  /// An object that can be used to control the drawer.
+  /// An object that can be used to control the [drawer].
   final SlidingDrawerController controller;
 
-  /// The content which displayed to the side of the body.
+  /// The content which displayed to the side of the [body].
   final Widget drawer;
 
   /// The primary content of the widget.
   final Widget body;
 
-  /// Indicates a direction which the drawer slides to
+  /// Indicates a direction which the [drawer] slides to
   ///
   /// Defaults to current text direction:
-  /// * AxisDirection.right if Directionality.of(context)
-  /// returns TextDirection.ltr,
-  /// * AxisDirection.left if Directionality.of(context)
-  /// returns TextDirection.rtl
+  /// * [AxisDirection.right] if Directionality.of(context)
+  /// returns [TextDirection.ltr],
+  /// * [AxisDirection.left] if Directionality.of(context)
+  /// returns [TextDirection.rtl]
   final AxisDirection? axisDirection;
 
   /// Called when a user taps on the shaded area.
   ///
-  /// Usually uses for closing the drawer.
+  /// When [onShadedAreaTap] is not null and the drawer is not closed
+  /// every interaction with the [body] will be ignored.
+  /// To avoid this behavior leave [onShadedAreaTap] is null.
+  ///
+  /// Usually used for closing the [drawer].
   final void Function()? onShadedAreaTap;
 
-  /// The drawer shade color which displayed when the drawer is open.
+  /// The drawer shade color which displayed when the [drawer] is open.
   final Color shadeColor;
 
   @override
@@ -107,13 +111,16 @@ class SlidingDrawer extends StatelessWidget {
                     children: [
                       body,
                       if (!controller.isClosed)
-                        ColoredBox(
-                          color: _getShadeColor(),
-                          child: ConstrainedBox(
-                            constraints: const BoxConstraints.expand(),
+                        IgnorePointer(
+                          ignoring: onShadedAreaTap == null,
+                          child: ColoredBox(
+                            color: _getShadeColor(),
+                            child: ConstrainedBox(
+                              constraints: const BoxConstraints.expand(),
+                            ),
                           ),
                         ),
-                      if (controller.isOpen)
+                      if (onShadedAreaTap != null && controller.isOpen)
                         GestureDetector(
                           onTap: onShadedAreaTap,
                         ),
