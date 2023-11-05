@@ -5,11 +5,11 @@ class DrawerWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: const [
+          children: [
             _DrawerHeader(),
             Expanded(child: _DrawerBody()),
             _DrawerFooter(),
@@ -116,7 +116,7 @@ class _DrawerFooter extends StatelessWidget {
           size: 72,
           textColor: Theme.of(context).textTheme.bodyMedium!.color!,
           style: FlutterLogoStyle.horizontal,
-        )
+        ),
       ],
     );
   }

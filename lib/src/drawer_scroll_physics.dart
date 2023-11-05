@@ -55,7 +55,7 @@ class DrawerScrollPhysics extends ScrollPhysics {
 
     final drawerPosition = position as SlidingDrawerScrollPosition;
 
-    final tolerance = this.tolerance;
+    final tolerance = toleranceFor(position);
     final target = _getTargetPixels(
       position: drawerPosition,
       tolerance: tolerance,
