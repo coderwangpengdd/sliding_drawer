@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:sliding_drawer/src/drawer_scroll_physics.dart';
 import 'package:sliding_drawer/src/sliding_drawer_controller.dart';
 import 'package:sliding_drawer/src/sliver_sliding_drawer.dart';
 
@@ -91,7 +90,7 @@ class SlidingDrawer extends StatelessWidget {
     return Scrollable(
       axisDirection: direction,
       controller: controller,
-      physics: const DrawerScrollPhysics(),
+      physics: const ClampingScrollPhysics(),
       scrollBehavior: ScrollConfiguration.of(context).copyWith(
         scrollbars: false,
         overscroll: false,
